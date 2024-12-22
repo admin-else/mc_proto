@@ -1,0 +1,5 @@
+struct { {{ container_stack_push(data) }}
+{% for item in data %}
+  {{ get(item["type"], "structline", name=item["name"]) }}
+{% endfor %}
+} {{name}};{{ container_stack_pop() }}

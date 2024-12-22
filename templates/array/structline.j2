@@ -1,0 +1,4 @@
+struct {
+  {{ get(countType, "structline", name="count") }}
+  {{ get(type, "structline", name="data[]") }} {# praying this works #}
+} {{name}};

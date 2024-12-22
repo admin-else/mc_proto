@@ -1,0 +1,5 @@
+union {
+  {% for k, v in fields.items() %}
+  {{ get(v, "structline", name=k) }}
+  {% endfor %}
+} {{ name }};

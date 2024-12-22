@@ -1,0 +1,9 @@
+enum {
+{% for k, v in mappings.items() %}
+{% if current_packet == name %}
+{{ current_packet }}_{{ v }} = {{ k }},
+{% else %}
+{{ current_packet }}_{{ name }}_{{ v }} = {{ k }},
+{% endif %}
+{% endfor %}
+} {{name}};

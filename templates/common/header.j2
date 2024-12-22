@@ -1,0 +1,5 @@
+#include<mc_proto/universal_types.h>
+{% for name, data in data.items() %}
+{{set_current_packet(name)}}typedef {{ get(data, "structline", name=name) }}
+
+{% endfor %}

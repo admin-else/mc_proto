@@ -1,0 +1,8 @@
+{% if count is defined %}
+uint8_t {{name}}[{{count}}];
+{% elif countType is defined %}
+struct {
+  uint8_t *data;
+  mc_proto_{{countType}} len;
+} {{name}};
+{% endif %}

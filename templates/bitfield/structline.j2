@@ -1,0 +1,5 @@
+struct {
+  {% for item in data %}
+  {% if not item["signed"] %}u{% endif %}int32_t {{ item["name"] }} : {{ item["size"] }};
+  {% endfor %}
+} {{name}};
